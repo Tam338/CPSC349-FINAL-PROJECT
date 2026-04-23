@@ -1,0 +1,14 @@
+#header div {
+    display: flex;
+    align-items: center;
+}
+
+#header button{
+    background-color: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#header button:hover {
+    color: green;
+}
