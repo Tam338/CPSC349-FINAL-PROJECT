@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Timer from 'lucide-react';
+import {Timer} from 'lucide-react';
 
 function TimerButton() {
     return (
@@ -7,4 +7,4 @@ function TimerButton() {
     );
 }
 
-export default TimerButton
+export default TimerButton;
