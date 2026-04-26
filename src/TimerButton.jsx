@@ -1,10 +1,16 @@
 import { useState } from 'react';
 import {Timer} from 'lucide-react';
 
-function TimerButton() {
+function TimerButton({...props}) {
+
     return (
-        <button><Timer size={50}/></button>
-    );
+        <>
+            <button {...props}>
+                <Timer size={50}/>
+            </button>
+        </>
+    )
 }
+
 
 export default TimerButton;

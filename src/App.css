@@ -24,7 +24,7 @@ body {
     padding: 1px 100px;
 }
 
-.header button {
+button {
     background-color: transparent;
     color: rgb(88, 126, 170);
 
@@ -38,7 +38,43 @@ body {
 }
 
 
+.timer-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    border: 1px solid rgb(225, 225, 225, 0.2);
+    background:rgba(96, 109, 186, 0.1);
+    backdrop-filter: blur(5px);
+
+    border-radius: 30px;
+}
+.timer-buttons button {
+    padding: 10px 30px;
+    margin: 5px;
+    font-size: 20px;
+    background-color:rgba(96, 109, 186, 0.1);
+}
+.timer-buttons button:hover {
+    transform: scale(1.10);
+}
+
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(225, 225, 225, 0.2);
+    background:rgba(96, 109, 186, 0.1);
+    backdrop-filter: blur(5px);
+
+    border-radius: 30px;
+    padding: 1px 100px;
+    
+    width: 30%;
+    height: 60%;
+    margin: 70px;
+}
 
 
 
