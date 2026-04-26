@@ -1,17 +1,10 @@
 import { useState } from 'react'
-import { Timer } from 'lucide-react'
-import { Calendar } from 'lucide-react'
-import { Music } from 'lucide-react'
-import { ClipboardList } from 'lucide-react'
+import { Timer, Calendar as CalendarIcon, Music, ClipboardList } from 'lucide-react'
+import Calendar from 'react-calendar'
 
 import './App.css'
 
 function App() {
-  const [timerButton, setTimerButton] = useState(false);
-  function handleTimer(timerButton)
-  {
-
-  }
 
 
 
@@ -19,8 +12,8 @@ function App() {
     <>
       <div className="main-page">
         <nav className="header">
-          <button onClick={ () }><Timer size={50}/></button>
-          <button><Calendar size={50}/></button>
+          <button><Timer size={50}/></button>
+          <button><CalendarIcon size={50}/></button>
           <button><Music size={50}/></button>
           <button><ClipboardList size={50}/></button>
         </nav>
