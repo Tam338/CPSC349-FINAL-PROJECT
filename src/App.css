@@ -62,6 +62,7 @@ button {
 
 .display {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     border: 1px solid rgb(225, 225, 225, 0.2);
@@ -76,7 +77,7 @@ button {
     
     width: 30%;
     height: 60%;
-    margin: 50px;
+    margin: 90px;
 }
 
 

@@ -94,19 +94,12 @@ function App() {
           </div>
         )}
 
-        <div  className='display'>
           { (time > 0) &&
-            <div>
+            <div className='display'>
               <h1>{formatTime()}</h1>
             </div>
           }
-          
-          { showCalendar && 
-            <div>
-              <Calendar/>
-            </div>
-          }
-        </div>
+
       </div>
     </>
   )
