@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react'
 import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css';
 
-import {Timer, Pause, Play, RotateCcw, Music, ClipboardList, Calendar as CalendarIcon } from 'lucide-react';
+
+
+import {X, Timer, Pause, Play, RotateCcw, Music, ClipboardList, Calendar as CalendarIcon } from 'lucide-react';
 
 import './App.css'
 
 function App() {
 
   const [timerButtons, setTimerButtons] = useState(false);
+  const [played, setPlayed] = useState(false);
+
   const [isRunning, setIsRunning] = useState(false);
   const [time, setTime] = useState(0);
   const [iniTime, setIniTime] = useState(0);
@@ -53,6 +58,8 @@ function App() {
           <button><ClipboardList size={50}/></button>
         </nav>
 
+
+        
         { timerButtons && (
           <div className='timer-buttons'
             >
@@ -87,18 +94,29 @@ function App() {
                 }}>60</button>
             </div>
             <div>
-              <button onClick={ () => setIsRunning(true)}><Play/></button>
-              <button onClick={ () => setIsRunning(false)}><Pause/></button>
+              <button onClick={ () => {
+                setPlayed(!played)
+                setIsRunning(!isRunning)}}>{ played ? <Play/> : <Pause/> }</button>
               <button onClick={ () => setTime(iniTime)}><RotateCcw/></button>
+              <button onClick={ () => setTime(0)}><X/></button>
             </div>
           </div>
         )}
 
+        <div className='display'> 
           { (time > 0) &&
-            <div className='display'>
+            <div className='timer-display'>
               <h1>{formatTime()}</h1>
             </div>
           }
+
+          {
+            showCalendar && 
+            <div>
+              <Calendar/>
+            </div>
+          }
+        </div>
 
       </div>
     </>

@@ -1,14 +1,14 @@
 body {
     margin: 0;
+
+    background-image: url('./assets/tux-linux.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .main-page{
     height: 100vh;
     width: 100%;
-
-    background-image: url('./assets/tux-linux.png');
-    background-size: cover;
-    background-position: center;
 
     display: flex;
     flex-direction: column;
@@ -60,30 +60,62 @@ button {
     transform: scale(1.10);
 }
 
-.display {
+.display{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.timer-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border: 1px solid rgb(225, 225, 225, 0.2);
     background:rgba(96, 109, 186, 0.1);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(1px);
 
     color: rgb(59, 117, 184);
+    font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
     font-size: 100px;
 
     border-radius: 30px;
     padding: 1px 100px;
     
-    width: 30%;
-    height: 60%;
-    margin: 90px;
+    width: 60%;
+    height: 80%;
+    margin: 110px;
 }
 
 
+.react-calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
 
+    background:rgba(96, 109, 186, 0.1);
+    backdrop-filter: blur(50px);
 
+    color: rgb(7, 89, 182);
+    font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
+    font-size: 30px;
 
+    width: 700px;
+    height: 500px;
+    margin-top: 100px;
 
+}
+
+.react-calendar__navigation__label {
+    font-size: 30px;
+    color: rgb(7, 89, 182);
+}
+
+.react-calendar__month-view__weekdays {
+    color: #1f2937;
+}
 
 
