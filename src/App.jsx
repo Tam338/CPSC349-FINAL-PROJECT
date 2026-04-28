@@ -98,7 +98,10 @@ function App() {
                 setPlayed(!played)
                 setIsRunning(!isRunning)}}>{ played ? <Play/> : <Pause/> }</button>
               <button onClick={ () => setTime(iniTime)}><RotateCcw/></button>
-              <button onClick={ () => setTime(0)}><X/></button>
+              <button onClick={ () => {
+                setTime(0)
+                setTimerButtons(false)
+                }}><X/></button>
             </div>
           </div>
         )}
