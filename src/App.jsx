@@ -13,6 +13,9 @@ function App() {
   const [timerButtons, setTimerButtons] = useState(false);
   const [played, setPlayed] = useState(false);
 
+  const [music, setMusic] = useState(false);
+  const [musicButtons, setMusicButtons] = useState(false)
+
   const [isRunning, setIsRunning] = useState(false);
   const [time, setTime] = useState(0);
   const [iniTime, setIniTime] = useState(0);
@@ -50,11 +53,18 @@ function App() {
       <div className="main-page">
         <nav className="header">
           <button 
-            onClick={ () => setTimerButtons(!timerButtons) }>
+            onClick={ () => {
+              setMusicButtons(false)
+              setTimerButtons(!timerButtons) }}>
           <Timer size={50}/></button>
 
           <button onClick={ () => setShowCalendar(!showCalendar) }><CalendarIcon size={50}/></button>
-          <button><Music size={50}/></button>
+          <button
+            onClick={ () => { 
+              setTimerButtons(false)
+              setMusicButtons(!musicButtons) 
+            }}
+          ><Music size={50}/></button>
           <button><ClipboardList size={50}/></button>
         </nav>
 
@@ -106,6 +116,14 @@ function App() {
           </div>
         )}
 
+        { musicButtons && 
+          <div className='music-button'>
+            <button onClick={ () => {
+                setPlayed(!played)
+                setMusic(!music)}}>{ played ? <Play/> : <Pause/> }</button>
+          </div>
+        }
+
         <div className='display'> 
           { (time > 0) &&
             <div className='timer-display'>
@@ -120,6 +138,18 @@ function App() {
             </div>
           }
         </div>
+
+        { music && 
+          <iframe
+          width="0"
+          height="0"
+          src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1"
+          title="Lofi Music"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        />
+        }
 
       </div>
     </>
