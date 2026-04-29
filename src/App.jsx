@@ -66,7 +66,17 @@ function App() {
             }}
           ><Music size={50}/></button>
           <button><ClipboardList size={50}/></button>
+
+          { musicButtons && 
+          <div className='music-button'>
+            <button onClick={ () => {
+                setPlayed(!played)
+                setMusic(!music)}}>{ played ? <Play/> : <Pause/> }</button>
+          </div>
+        }
         </nav>
+
+        
 
 
         
@@ -115,14 +125,6 @@ function App() {
             </div>
           </div>
         )}
-
-        { musicButtons && 
-          <div className='music-button'>
-            <button onClick={ () => {
-                setPlayed(!played)
-                setMusic(!music)}}>{ played ? <Play/> : <Pause/> }</button>
-          </div>
-        }
 
         <div className='display'> 
           { (time > 0) &&
