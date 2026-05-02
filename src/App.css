@@ -84,7 +84,7 @@ button:active {
     backdrop-filter: blur(1px);
 
     color: rgb(59, 117, 184);
-    font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
+    font-family: 'Segoe Print', 'Bradley Hand', cursive;
     font-size: 100px;
 
     border-radius: 30px;
