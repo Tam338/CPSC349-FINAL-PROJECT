@@ -65,7 +65,7 @@ function App() {
               setMusicButtons(!musicButtons) 
             }}
           ><Music size={50}/></button>
-          <button><ClipboardList size={50}/></button>
+          {/*<button><ClipboardList size={50}/></button>*/}
 
           { musicButtons && 
           <div className='music-button'>
